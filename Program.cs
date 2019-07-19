@@ -12,8 +12,7 @@ namespace Bakery {
         public static void Main()
             {
             BuyPrompt();
-            
-            
+            //int breadCost = GetBreadCost();
             }
 
         public static void BuyPrompt()
@@ -58,8 +57,11 @@ namespace Bakery {
             Console.WriteLine("How many loaves would you like to buy?");
             int breadNumber = int.Parse(Console.ReadLine());
             Bread bread = new Bread(breadNumber, 5);
+            //Getting CS1503 cannot convert from 'method group' to 'bool'
+            Console.WriteLine(bread.GetBreadCost);
+             //CS0103 'GetBreadCost does not exist in current context  for these below
             //GetBreadCost();
-            Console.WriteLine(GetBreadCost);
+            //Console.WriteLine(newBread.GetBreadCost());
             BakeType();
             }
 
