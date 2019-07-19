@@ -18,6 +18,7 @@ namespace Bakery {
 
         public static void BuyPrompt()
             {
+            Console.WriteLine("-----------------------------");
             Console.WriteLine("Welcome to Pierre's Bakery, loaves of bread are $5, but buy 2 and get 1 free.  Pastries $2, or 3 for $5.  Would you like to make and order? [y / n]");
             string orderCheck = Console.ReadLine();
             if (orderCheck.ToLower() == "y")
@@ -31,24 +32,43 @@ namespace Bakery {
             }
         public static void BakeType()
             {
-            Console.WriteLine("Would you like to purchase bread or pastries?");
+            Console.WriteLine("Would you like to purchase any bread or pastries?");
             string bakeSelect = Console.ReadLine();
-            if bakeSelect.ToLower() == "bread")
+            if (bakeSelect.ToLower() == "bread")
                 {
                 BreadBuy();
                 }
-            else if (bakeSelect.ToLower() == "pastries");
+            else if (bakeSelect.ToLower() == "pastries")
                 {
                 PastryBuy();
+                }
+            else if (bakeSelect.ToLower() == "n" || bakeSelect.ToLower() == "no")
+                {
+                BuyPrompt();
                 }
             else
                 {
             Console.WriteLine("I'm sorry we didn't understand that");
-            BuyPrompt();
+            BakeType();
                 }
             }
+
+        public static void BreadBuy()
+            {
+            Console.WriteLine("How many loaves would you like to buy?");
+            int breadNumber = int.Parse(Console.ReadLine());
+            BakeType();
+            }
+
+        public static void PastryBuy()
+            {
+            Console.WriteLine("How many pasteries would you like to buy?");
+            int pastryNumber = int.Parse(Console.ReadLine());
+            BakeType();
+            }
         }
-    }
+}
+    
     /*When the user runs the application, they should receive a prompt with a welcome message along with the cost for both Bread and Pastry.
 
 A user should be able to specify how many loaves of Bread and how many Pastrys they'd like.
@@ -66,5 +86,3 @@ Pastry: Buy 1 for \$2 or 3 for $5.*/
 
             }
         }*/
-
-}
