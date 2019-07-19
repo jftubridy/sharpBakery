@@ -57,11 +57,19 @@ namespace Bakery {
             Console.WriteLine("How many loaves would you like to buy?");
             int breadNumber = int.Parse(Console.ReadLine());
             Bread bread = new Bread(breadNumber, 5);
+            //error CS1503: Argument 1: cannot convert from 'method group' to 'ReadOnlySpan<char>'
+            //int breadPrice = int.Parse(bread.GetBreadCost);
+            //error CS0428: Cannot convert method group 'GetBreadCost' to non-delegate type 'int'
+            //int breadPrice = bread.GetBreadCost;
+            //Console.WriteLine(breadPrice);
             //Getting CS1503 cannot convert from 'method group' to 'bool'
-            Console.WriteLine(bread.GetBreadCost);
+            //Console.WriteLine(bread.GetBreadCost);
              //CS0103 'GetBreadCost does not exist in current context  for these below
             //GetBreadCost();
             //Console.WriteLine(newBread.GetBreadCost());
+
+            int breadCost = ((breadNumber/3)*-5+(breadNumber*5));
+            Console.WriteLine(breadCost);
             BakeType();
             }
 
@@ -70,9 +78,9 @@ namespace Bakery {
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
             Pastry pastry = new Pastry(pastryNumber, 2);
-            /*Need to add a way to count up the number and figure cost.\
-             for list [i] cost + 2 
-             if list[i]%3=0 cost + 1*/
+            int pastryCost = ((pastryNumber/3)*-1+(pastryNumber*2));
+            Console.WriteLine(pastryCost);
+
             BakeType();
             }
         }
