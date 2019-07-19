@@ -7,14 +7,13 @@ namespace Bakery {
     public class Program
         {
 
-                 /*Need to add a way to count up the number and figure cost.*/
-
-        public static List<string> breadAmmount = new List<string>();
-        public static List<string> pastryAmmount = new List<string>();
+           
 
         public static void Main()
             {
             BuyPrompt();
+            
+            
             }
 
         public static void BuyPrompt()
@@ -58,10 +57,9 @@ namespace Bakery {
             {
             Console.WriteLine("How many loaves would you like to buy?");
             int breadNumber = int.Parse(Console.ReadLine());
-            /*Need to add a way to count up the number and figure cost.
-             maybe add to a list, for every 3rd item doesn't increase cost
-             if list[i]%3=0 don't increase
-             for list[1] cost + 5 */
+            Bread bread = new Bread(breadNumber, 5);
+            //GetBreadCost();
+            Console.WriteLine(GetBreadCost);
             BakeType();
             }
 
@@ -69,6 +67,7 @@ namespace Bakery {
             {
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
+            Pastry pastry = new Pastry(pastryNumber, 2);
             /*Need to add a way to count up the number and figure cost.\
              for list [i] cost + 2 
              if list[i]%3=0 cost + 1*/

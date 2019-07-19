@@ -4,15 +4,22 @@ namespace Bakery {
 
     class Bread
         {
-        public string Type { get; set; }
+        public int Amount { get; set; }
         public int Price { get; set; }
          
-        public Bread(string type, int price)
+        public Bread(int amount, int price)
             {
-            Type = type;
-            Price = price;
+            Amount = amount;
+            Price = 5;
             }
 
+        public int GetBreadCost()
+            {
+            int startPrice = Amount * Price;
+            int freeLoaf = (Amount / 3) * -5;
+            int breadCost = freeLoaf + startPrice;
+            return breadCost;
+            }
         /*public string GetType()
             {
             return _type;
@@ -27,12 +34,12 @@ namespace Bakery {
         }
     class Pastry
         {
-        public string Type { get; set; }
+        public int Amount { get; set; }
         public int Price { get; set; }
 
-        public Pastry(string type, int price)
+        public Pastry(int amount, int price)
             {
-            Type = type;
+            Amount = amount;
             Price = price;
             }
         }
