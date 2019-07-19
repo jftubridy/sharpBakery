@@ -7,7 +7,8 @@ namespace Bakery {
     public class Program
         {
 
-     
+                 /*Need to add a way to count up the number and figure cost.*/
+
         public static List<string> breadAmmount = new List<string>();
         public static List<string> pastryAmmount = new List<string>();
 
@@ -19,7 +20,7 @@ namespace Bakery {
         public static void BuyPrompt()
             {
             Console.WriteLine("-----------------------------");
-            Console.WriteLine("Welcome to Pierre's Bakery, loaves of bread are $5, but buy 2 and get 1 free.  Pastries $2, or 3 for $5.  Would you like to make and order? [y / n]");
+            Console.WriteLine("Welcome to Pierre's Bakery, loaves of bread are $5, but buy 2 and get 1 free.  Pastries are $2, or 3 for $5.  Would you like to make and order? [y / n]");
             string orderCheck = Console.ReadLine();
             if (orderCheck.ToLower() == "y")
                 {
@@ -57,6 +58,10 @@ namespace Bakery {
             {
             Console.WriteLine("How many loaves would you like to buy?");
             int breadNumber = int.Parse(Console.ReadLine());
+            /*Need to add a way to count up the number and figure cost.
+             maybe add to a list, for every 3rd item doesn't increase cost
+             if list[i]%3=0 don't increase
+             for list[1] cost + 5 */
             BakeType();
             }
 
@@ -64,20 +69,21 @@ namespace Bakery {
             {
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
+            /*Need to add a way to count up the number and figure cost.\
+             for list [i] cost + 2 
+             if list[i]%3=0 cost + 1*/
             BakeType();
             }
         }
 }
     
-    /*When the user runs the application, they should receive a prompt with a welcome message along with the cost for both Bread and Pastry.
-
-A user should be able to specify how many loaves of Bread and how many Pastrys they'd like.
-
-The application will return the total cost of the order.
+    /*
+       The application will return the total cost of the order.
 
 Pierre offers the following deals:
 
 Bread: Buy 2, get 1 free. A single loaf costs $5.
+
 Pastry: Buy 1 for \$2 or 3 for $5.*/
  /*   public class Pastry
         {
