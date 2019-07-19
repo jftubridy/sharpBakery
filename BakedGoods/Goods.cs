@@ -1,6 +1,6 @@
 using System;
 
-namespace BakedGoods {
+namespace Bakery {
 
     class Bread
         {
