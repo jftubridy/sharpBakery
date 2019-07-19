@@ -31,7 +31,7 @@ namespace Bakery {
             }
         public static void BakeType()
             {
-            Console.WriteLine("Would you like to purchase any bread or pastries?");
+            Console.WriteLine("Would you like to purchase any bread or pastries?  type n to return");
             string bakeSelect = Console.ReadLine();
             if (bakeSelect.ToLower() == "bread")
                 {
@@ -75,6 +75,7 @@ namespace Bakery {
 
         public static void PastryBuy()
             {
+            //come back and change this to use classes
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
             Pastry pastry = new Pastry(pastryNumber, 2);
@@ -82,6 +83,11 @@ namespace Bakery {
             Console.WriteLine(pastryCost);
 
             BakeType();
+            }
+        public static void CurrentCart()
+            {
+            int finalCost = (breadCost = pastryCost);
+            Console.WriteLine("You have " + breadNumber + " for a total of $" + breadCost + " and " + pastryNumber + " for a total of $" + pastryCost + ". Your Final bill is: $" + finalCost);
             }
         }
 }
