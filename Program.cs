@@ -7,10 +7,6 @@ namespace Bakery
 
     public class Program
     {
-        // static int breadNumber = int.Parse(Console.ReadLine());
-        // //  Bread bread = new Bread(breadNumber, 5);
-        // static int pastryNumber = int.Parse(Console.ReadLine());
-        // //  Pastry pastry = new Pastry(pastryNumber, 2);
         public static int breadNumbers = 0;
         public static int pastryNumbers = 0;
         public static int breadTotal = 0;
@@ -63,6 +59,7 @@ namespace Bakery
             }
             else if (bakeSelect.ToLower() == "n" || bakeSelect.ToLower() == "cart")
             {
+                //breadTotal = bread.GetBreadCost(breadNumbers, 5);
                 Console.WriteLine("------------------------");
                 int finalCost = breadTotal + pastryTotal;
                 Console.WriteLine("You have " + breadNumbers + " loaves for a total of $" + breadTotal + " and " + pastryNumbers + " pastries for a total of $" + pastryTotal + ". Your Final bill is: $" + finalCost);
@@ -82,7 +79,7 @@ namespace Bakery
             breadNumbers += breadNumber;
             Bread bread = new Bread(breadNumber, 5);
             // int breadCost = ((breadNumber / 3) * -5 + (breadNumber * 5));
-            breadTotal += bread.GetBreadCost(breadNumber, 5);
+            breadTotal = bread.GetBreadCost(breadNumbers, 5);
             Console.WriteLine("Bread Cost: " + breadTotal);
             BakeType();
         }
@@ -95,7 +92,7 @@ namespace Bakery
             pastryNumbers += pastryNumber;
             Pastry pastry = new Pastry(pastryNumber, 2);
             // int pastryCost = ((pastryNumber / 3) * -1 + (pastryNumber * 2));
-            pastryTotal += pastry.GetPastryCost(pastryNumber, 2);
+            pastryTotal = pastry.GetPastryCost(pastryNumbers, 2);
             Console.WriteLine("Pastry Cost:  " + pastryTotal);
 
             BakeType();
