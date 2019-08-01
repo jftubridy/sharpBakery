@@ -7,14 +7,18 @@ namespace Bakery
 
     public class Program
     {
-        static int breadNumber = int.Parse(Console.ReadLine());
-        Bread bread = new Bread(breadNumber, 5);
-        static int pastryNumber = int.Parse(Console.ReadLine());
-        Pastry pastry = new Pastry(pastryNumber, 2);
-
+        // static int breadNumber = int.Parse(Console.ReadLine());
+        // //  Bread bread = new Bread(breadNumber, 5);
+        // static int pastryNumber = int.Parse(Console.ReadLine());
+        // //  Pastry pastry = new Pastry(pastryNumber, 2);
+        public static int breadNumbers = 0;
+        public static int pastryNumbers = 0;
+        public static int breadTotal = 0;
+        public static int pastryTotal = 0;
 
         public static void Main()
         {
+
             BuyPrompt();
 
             // breadNumber = int.Parse(Console.ReadLine());
@@ -22,6 +26,13 @@ namespace Bakery
             // int pastryNumber = int.Parse(Console.ReadLine());
             // Pastry pastry = new Pastry(pastryNumber, 2);
             //int breadCost = GetBreadCost();
+        }
+        public static void ShowCart()
+        {
+            // int finalCost = breadTotal + pastryTotal;
+            // Console.WriteLine("You have " + breadNumber + " for a total of $" + breadTotal + " and " + pastryNumber + " for a total of $" + pastryTotal + ". Your Final bill is: $" + breadTotal);
+            // Console.WriteLine(breadTotal);
+            Main();
         }
 
         public static void BuyPrompt()
@@ -40,7 +51,7 @@ namespace Bakery
         }
         public static void BakeType()
         {
-            Console.WriteLine("Would you like to purchase any bread or pastries?  type n to return");
+            Console.WriteLine("Would you like to purchase any bread or pastries?  cart to view cart");
             string bakeSelect = Console.ReadLine();
             if (bakeSelect.ToLower() == "bread")
             {
@@ -50,9 +61,12 @@ namespace Bakery
             {
                 PastryBuy();
             }
-            else if (bakeSelect.ToLower() == "n" || bakeSelect.ToLower() == "no")
+            else if (bakeSelect.ToLower() == "n" || bakeSelect.ToLower() == "cart")
             {
-                BuyPrompt();
+                Console.WriteLine("------------------------");
+                int finalCost = breadTotal + pastryTotal;
+                Console.WriteLine("You have " + breadNumbers + " loaves for a total of $" + breadTotal + " and " + pastryNumbers + " pastries for a total of $" + pastryTotal + ". Your Final bill is: $" + finalCost);
+                Main();
             }
             else
             {
@@ -65,23 +79,11 @@ namespace Bakery
         {
             Console.WriteLine("How many loaves would you like to buy?");
             int breadNumber = int.Parse(Console.ReadLine());
-            int price = 5;
+            breadNumbers += breadNumber;
             Bread bread = new Bread(breadNumber, 5);
-            //error CS1503: Argument 1: cannot convert from 'method group' to 'ReadOnlySpan<char>'
-            //int breadPrice = int.Parse(bread.GetBreadCost);
-            //error CS0428: Cannot convert method group 'GetBreadCost' to non-delegate type 'int'
-            //int breadPrice = bread.GetBreadCost;
-            //Console.WriteLine(breadPrice);
-            //Getting CS1503 cannot convert from 'method group' to 'bool'
-            //Console.WriteLine(bread.GetBreadCost);
-            //CS0103 'GetBreadCost does not exist in current context  for these below
-            //GetBreadCost();
-            //Console.WriteLine(newBread.GetBreadCost());
-
-
-
             // int breadCost = ((breadNumber / 3) * -5 + (breadNumber * 5));
-            Console.WriteLine(bread.GetBreadCost(breadNumber, 5));
+            breadTotal += bread.GetBreadCost(breadNumber, 5);
+            Console.WriteLine("Bread Cost: " + breadTotal);
             BakeType();
         }
 
@@ -90,33 +92,15 @@ namespace Bakery
             //come back and change this to use classes
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
+            pastryNumbers += pastryNumber;
             Pastry pastry = new Pastry(pastryNumber, 2);
             // int pastryCost = ((pastryNumber / 3) * -1 + (pastryNumber * 2));
-            Console.WriteLine(pastry.GetPastryCost(pastryNumber, 2));
+            pastryTotal += pastry.GetPastryCost(pastryNumber, 2);
+            Console.WriteLine("Pastry Cost:  " + pastryTotal);
 
             BakeType();
         }
 
-        public static void CurrentCart()
-        {
-            int finalCost = (bread.GetBreadCost(breadNumber, 5) + pastry.GetPastryCost(pastryNumber, 2));
-            Console.WriteLine("You have " + breadNumber + " for a total of $" + bread.GetBreadCost(breadNumber, 5) + " and " + pastryNumber + " for a total of $" + pastry.GetGetPastryCost(pastryNumber, 2) + ". Your Final bill is: $" + finalCost);
-        }
+
     }
 }
-
-/*
-   The application will return the total cost of the order.
-
-Pierre offers the following deals:
-
-Bread: Buy 2, get 1 free. A single loaf costs $5.
-
-Pastry: Buy 1 for \$2 or 3 for $5.*/
-/*   public class Pastry
-       {
-       public static void Main()
-           {
-
-           }
-       }*/

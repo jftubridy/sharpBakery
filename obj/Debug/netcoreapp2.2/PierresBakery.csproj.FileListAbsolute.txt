@@ -9,3 +9,14 @@ C:\Users\josep\desktop\coding stuff\PierresBakery\bin\Debug\netcoreapp2.2\Pierre
 C:\Users\josep\desktop\coding stuff\PierresBakery\bin\Debug\netcoreapp2.2\PierresBakery.pdb
 C:\Users\josep\desktop\coding stuff\PierresBakery\obj\Debug\netcoreapp2.2\PierresBakery.dll
 C:\Users\josep\desktop\coding stuff\PierresBakery\obj\Debug\netcoreapp2.2\PierresBakery.pdb
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\bin\Debug\netcoreapp2.2\PierresBakery.deps.json
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\bin\Debug\netcoreapp2.2\PierresBakery.runtimeconfig.json
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\bin\Debug\netcoreapp2.2\PierresBakery.runtimeconfig.dev.json
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\bin\Debug\netcoreapp2.2\PierresBakery.dll
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\bin\Debug\netcoreapp2.2\PierresBakery.pdb
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\obj\Debug\netcoreapp2.2\PierresBakery.csprojAssemblyReference.cache
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\obj\Debug\netcoreapp2.2\PierresBakery.csproj.CoreCompileInputs.cache
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\obj\Debug\netcoreapp2.2\PierresBakery.AssemblyInfoInputs.cache
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\obj\Debug\netcoreapp2.2\PierresBakery.AssemblyInfo.cs
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\obj\Debug\netcoreapp2.2\PierresBakery.dll
+C:\Users\Joseph\desktop\coding stuff\sharpBakery\obj\Debug\netcoreapp2.2\PierresBakery.pdb
