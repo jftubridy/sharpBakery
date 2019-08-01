@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josep\\desktop\\coding stuff\\PierresBakery\\PierresBakery.csproj": {}
+    "C:\\Users\\Joseph\\desktop\\coding stuff\\sharpBakery\\PierresBakery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josep\\desktop\\coding stuff\\PierresBakery\\PierresBakery.csproj": {
+    "C:\\Users\\Joseph\\desktop\\coding stuff\\sharpBakery\\PierresBakery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josep\\desktop\\coding stuff\\PierresBakery\\PierresBakery.csproj",
+        "projectUniqueName": "C:\\Users\\Joseph\\desktop\\coding stuff\\sharpBakery\\PierresBakery.csproj",
         "projectName": "PierresBakery",
-        "projectPath": "C:\\Users\\josep\\desktop\\coding stuff\\PierresBakery\\PierresBakery.csproj",
-        "packagesPath": "C:\\Users\\josep\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josep\\desktop\\coding stuff\\PierresBakery\\obj\\",
+        "projectPath": "C:\\Users\\Joseph\\desktop\\coding stuff\\sharpBakery\\PierresBakery.csproj",
+        "packagesPath": "C:\\Users\\Joseph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Joseph\\desktop\\coding stuff\\sharpBakery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\josep\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Joseph\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"

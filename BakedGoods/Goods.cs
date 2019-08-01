@@ -43,7 +43,7 @@ namespace Bakery {
             Price = price;
             }
 
-         public int GetPastryCost()
+        public int GetPastryCost()
             {
             int startPrice = Amount * Price;
             int threeDeal = (Amount / 3) * -1;
