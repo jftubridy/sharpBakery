@@ -8,8 +8,9 @@ namespace Bakery
     public class Program
     {
         static int breadNumber = int.Parse(Console.ReadLine());
-
+        Bread bread = new Bread(breadNumber, 5);
         static int pastryNumber = int.Parse(Console.ReadLine());
+        Pastry pastry = new Pastry(pastryNumber, 2);
 
 
         public static void Main()
