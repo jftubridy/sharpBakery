@@ -7,12 +7,19 @@ namespace Bakery
 
     public class Program
     {
+        static int breadNumber = int.Parse(Console.ReadLine());
 
+        static int pastryNumber = int.Parse(Console.ReadLine());
 
 
         public static void Main()
         {
             BuyPrompt();
+
+            // breadNumber = int.Parse(Console.ReadLine());
+            // Bread bread = new Bread(breadNumber, 5);
+            // int pastryNumber = int.Parse(Console.ReadLine());
+            // Pastry pastry = new Pastry(pastryNumber, 2);
             //int breadCost = GetBreadCost();
         }
 
@@ -57,6 +64,7 @@ namespace Bakery
         {
             Console.WriteLine("How many loaves would you like to buy?");
             int breadNumber = int.Parse(Console.ReadLine());
+            int price = 5;
             Bread bread = new Bread(breadNumber, 5);
             //error CS1503: Argument 1: cannot convert from 'method group' to 'ReadOnlySpan<char>'
             //int breadPrice = int.Parse(bread.GetBreadCost);
@@ -70,9 +78,9 @@ namespace Bakery
             //Console.WriteLine(newBread.GetBreadCost());
 
 
-            GetBreadCost();
-            //            int breadCost = ((breadNumber/3)*-5+(breadNumber*5));
-            Console.WriteLine(breadCost);
+
+            // int breadCost = ((breadNumber / 3) * -5 + (breadNumber * 5));
+            Console.WriteLine(bread.GetBreadCost(breadNumber, 5));
             BakeType();
         }
 
@@ -82,15 +90,16 @@ namespace Bakery
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
             Pastry pastry = new Pastry(pastryNumber, 2);
-            int pastryCost = ((pastryNumber / 3) * -1 + (pastryNumber * 2));
-            Console.WriteLine(pastryCost);
+            // int pastryCost = ((pastryNumber / 3) * -1 + (pastryNumber * 2));
+            Console.WriteLine(pastry.GetPastryCost(pastryNumber, 2));
 
             BakeType();
         }
+
         public static void CurrentCart()
         {
-            int finalCost = (breadCost = pastryCost);
-            Console.WriteLine("You have " + breadNumber + " for a total of $" + breadCost + " and " + pastryNumber + " for a total of $" + pastryCost + ". Your Final bill is: $" + finalCost);
+            int finalCost = (bread.GetBreadCost(breadNumber, 5) + pastry.GetPastryCost(pastryNumber, 2));
+            Console.WriteLine("You have " + breadNumber + " for a total of $" + bread.GetBreadCost(breadNumber, 5) + " and " + pastryNumber + " for a total of $" + pastry.GetGetPastryCost(pastryNumber, 2) + ". Your Final bill is: $" + finalCost);
         }
     }
 }
