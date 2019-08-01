@@ -14,21 +14,7 @@ namespace Bakery
 
         public static void Main()
         {
-
             BuyPrompt();
-
-            // breadNumber = int.Parse(Console.ReadLine());
-            // Bread bread = new Bread(breadNumber, 5);
-            // int pastryNumber = int.Parse(Console.ReadLine());
-            // Pastry pastry = new Pastry(pastryNumber, 2);
-            //int breadCost = GetBreadCost();
-        }
-        public static void ShowCart()
-        {
-            // int finalCost = breadTotal + pastryTotal;
-            // Console.WriteLine("You have " + breadNumber + " for a total of $" + breadTotal + " and " + pastryNumber + " for a total of $" + pastryTotal + ". Your Final bill is: $" + breadTotal);
-            // Console.WriteLine(breadTotal);
-            Main();
         }
 
         public static void BuyPrompt()
@@ -59,7 +45,6 @@ namespace Bakery
             }
             else if (bakeSelect.ToLower() == "n" || bakeSelect.ToLower() == "cart")
             {
-                //breadTotal = bread.GetBreadCost(breadNumbers, 5);
                 Console.WriteLine("------------------------");
                 int finalCost = breadTotal + pastryTotal;
                 Console.WriteLine("You have " + breadNumbers + " loaves for a total of $" + breadTotal + " and " + pastryNumbers + " pastries for a total of $" + pastryTotal + ". Your Final bill is: $" + finalCost);
@@ -78,7 +63,6 @@ namespace Bakery
             int breadNumber = int.Parse(Console.ReadLine());
             breadNumbers += breadNumber;
             Bread bread = new Bread(breadNumber, 5);
-            // int breadCost = ((breadNumber / 3) * -5 + (breadNumber * 5));
             breadTotal = bread.GetBreadCost(breadNumbers, 5);
             Console.WriteLine("Bread Cost: " + breadTotal);
             BakeType();
@@ -86,12 +70,10 @@ namespace Bakery
 
         public static void PastryBuy()
         {
-            //come back and change this to use classes
             Console.WriteLine("How many pasteries would you like to buy?");
             int pastryNumber = int.Parse(Console.ReadLine());
             pastryNumbers += pastryNumber;
             Pastry pastry = new Pastry(pastryNumber, 2);
-            // int pastryCost = ((pastryNumber / 3) * -1 + (pastryNumber * 2));
             pastryTotal = pastry.GetPastryCost(pastryNumbers, 2);
             Console.WriteLine("Pastry Cost:  " + pastryTotal);
 
